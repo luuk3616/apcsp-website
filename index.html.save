@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,17 +7,20 @@
   <body>
 
     <h1>You have entered Kayla Luu territory</h1>
-    
+
     <p>I will make this web site much better by researching HTML and practicing Linux!</p>
 
     <li>I am a caffeine addicted teenager</li>
     <li>Vietnamese</li>
-    <li>Gay for Kehlani</li>
+    <li>My birthday is the same day that Shakespeare died</li>
     <li>Film lover</li>
     <li>Game of Thrones watcher</li>
-<a href="rpi14/sp2a/page2">Music Rec</a>
+<a href="page2.html">Music Rec</a>
+<a hef="linux.html">Linux commands</a>
+
+<img src="http://img.feedytv.com/2018/07/00-3.jpg" alt="Watermelon puppies">
 
 
- 
   </body>
 </html>
+
