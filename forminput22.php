@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Form Input 2</title>
+    <title>Hangman</title>
   </head>
 
 
   <body>
 
-    <h1>Form Input - Demo 2</h1>
-    <p>Demo of how to take form input and pass it to a program - all in a single page</p>
-
+    <h1>Hangman</h1>
+ 
     <?php
        // define variables and set to empty values
        $arg1 = $arg2 = $output = $retc = "";
        if ($_SERVER["REQUEST_METHOD"] == "POST") {
          $arg1 = test_input($_POST["arg1"]);
          $arg2 = test_input($_POST["arg2"]);
-         exec("/usr/lib/cgi-bin/sp2a/areaofcircle2 " . $arg1 . " " . $arg2, $output, $retc); 
+         exec("/usr/lib/cgi-bin/sp2a/hangman \"" . $arg1 . "\" " . $arg2, $output, $retc); 
        }
        function test_input($data) {
          $data = trim($data);
