@@ -1,11 +1,8 @@
-#include "stdio.h"
-#include "stdlib.h"
-#include "string.h"
-#include "time.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 int main(int argc, char* argv[]) {
-
-	srand(time(NULL));
 
 	char guessWords[][20] = {
 		"bear",
@@ -19,18 +16,12 @@ int main(int argc, char* argv[]) {
 	int randomIndex = rand() % 5;
 	int numCorrect = 0;
 	int lengthOfWord = strlen(guessWords[randomIndex]);
-	int letterGuessed[];
+	char letterGuessed[6] = "*****";
 	int loopIndex = 0;
 	int i;
 
     // game loop
 	for(i = 1; i < 6; i++) {
-
-		for(loopIndex = 0; loopIndex < lengthOfWord; loopIndex++) {
-			letterGuessed[loopIndex] = "*";
-			}
-		}
-
 		for(loopIndex = 0; loopIndex < lengthOfWord; loopIndex++) {
 			if(argv[i] == guessWords[randomIndex][loopIndex]) {
 				letterGuessed[loopIndex] = argv[i];
@@ -39,12 +30,13 @@ int main(int argc, char* argv[]) {
 		}
 	}
 	letterGuessed[lengthOfWord] = 0;
+  printf("%s\n", letterGuessed);
 
-	if(numCorrect = lengthOfWord) {
+	if(numCorrect == lengthOfWord) {
 		printf("The word was: %s\n", guessWords[randomIndex]);
 		printf("\nYou win!\n");
 	} else {
-		printf("You guessed: %s\n", letterGuessed);
+	  printf("You guessed: %s\n", letterGuessed);
 		printf("\nYou lose :(\n");
 	}
 	return 0;
