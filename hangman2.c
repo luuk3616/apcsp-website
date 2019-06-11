@@ -17,16 +17,14 @@ int main(int argc, char* argv[]) {
 	int numCorrect = 0;
 	int lengthOfWord = strlen(guessWords[randomIndex]);
 	char letterGuessed[6] = "*****";
-  char letter[6];
 	int loopIndex = 0;
 	int i;
 
     // game loop
 	for(i = 1; i < 6; i++) {
 		for(loopIndex = 0; loopIndex < lengthOfWord; loopIndex++) {
-      strcat(letter, argv[i]);
-			if(letter[i] == guessWords[randomIndex][loopIndex]) {
-				letterGuessed[loopIndex] = letter[i];
+			if(*argv[i] == guessWords[randomIndex][loopIndex]) {
+				letterGuessed[loopIndex] = *argv[i];
 				numCorrect++;
 			}
 		}
